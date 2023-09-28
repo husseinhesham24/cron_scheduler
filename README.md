@@ -18,11 +18,10 @@ This project is an in-process cron scheduler designed to facilitate the periodic
 
 ## Table of Contents
 
-- [Project File Structure](#project-file-structure)
+- [Project file structure](#project-file-structure)
+- [Example usage snippets](#example-usage-snippets)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [Possible future improvements](#possible-future-improvements)
 
 ## Project File Structure
 `/main.rb:`
@@ -84,12 +83,51 @@ the main application file that has the interaction code that the client dealing 
 **`log_job_execution`**
   - Logs the last execution details of all scheduled jobs, including start time, end time, expected execution time, and actual execution time.<hr>
 
+## Example usage snippets
+- `Insert the first job:`<br><br>
+![Example Image](images/img1.png)<hr>
 
+- `Insert the second job:`<br><br>
+![Example Image](images/img2.png)<hr>
 
+- `Instrument each job's details run after executing them`<br><br>
+![Example Image](images/img3.png)<hr>
+
+- `Instrument each job's details run after executing them for the second time`<br><br>
+![Example Image](images/img4.png)<hr>
+
+- `validation of expected interval and Scheduling frequency`<br><br>
+![Example Image](images/img5.png)<hr>
+
+- `validating the uniqueness of job identifiers`<br><br>
+![Example Image](images/img6.png)<hr>
 
 ## Installation
 
-Explain how to install and set up the project. Include any prerequisites or dependencies needed.
-
+Build the Docker image using the docker build command.
 ```bash
-# Provide installation steps or commands here
+docker build -t your_image_name .
+```
+ <br>
+
+Create a Docker container from the image you just built.
+```bash
+docker run -p  3000:3000 --name your_container_name -it your_image_name bash
+```
+<br>
+
+write the command `bundle install` to ensure that all gems are installed.
+```bash
+bundle install
+```
+<br>
+
+Run  `main.rb` and enjoy ^-^.
+```bash
+ruby main.rb
+```
+<hr>
+
+## Possible future improvements
+- We can add delete a job schedule option
+- we can make our script accept more Scheduling frequency format
