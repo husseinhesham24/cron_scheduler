@@ -1,5 +1,3 @@
-require "parser/current"
-
 def validate_interval(interval)
   valid_intervals = ["s", "m", "h", "d"]  # Valid interval units: minutes, hours, days
 
