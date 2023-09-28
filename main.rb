@@ -1,6 +1,5 @@
 require "./validate.rb"
 require "./scheduler.rb"
-require "./job.rb"
 require "rufus-scheduler"
 
 def add_job(job_list)
@@ -35,7 +34,7 @@ def add_job(job_list)
   scheduler.schedule_job(job_identifier, frequency, expected_interval, user_code)
 end
 
-puts "welcome to Telda cron scheduler"
+puts "welcome to cron scheduler"
 2.times do
   puts
 end

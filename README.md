@@ -1,15 +1,15 @@
 ```
- .----------------.  .----------------.  .----------------.  .-----------------.
-| .--------------. || .--------------. || .--------------. || .--------------. |
-| |     ______   | || |  _______     | || |     ____     | || | ____  _____  | |
-| |   .' ___  |  | || | |_   __ \    | || |   .'    `.   | || ||_   \|_   _| | |
-| |  / .'   \_|  | || |   | |__) |   | || |  /  .--.  \  | || |  |   \ | |   | |
-| |  | |         | || |   |  __ /    | || |  | |    | |  | || |  | |\ \| |   | |
-| |  \ `.___.'\  | || |  _| |  \ \_  | || |  \  `--'  /  | || | _| |_\   |_  | |
-| |   `._____.'  | || | |____| |___| | || |   `.____.'   | || ||_____|\____| | |
-| |              | || |              | || |              | || |              | |
-| '--------------' || '--------------' || '--------------' || '--------------' |
- '----------------'  '----------------'  '----------------'  '----------------' 
+ .----------------.  .----------------.  .----------------.  .-----------------. .----------------. 
+| .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
+| |     ______   | || |  _______     | || |     ____     | || | ____  _____  | || |    _______   | |
+| |   .' ___  |  | || | |_   __ \    | || |   .'    `.   | || ||_   \|_   _| | || |   /  ___  |  | |
+| |  / .'   \_|  | || |   | |__) |   | || |  /  .--.  \  | || |  |   \ | |   | || |  |  (__ \_|  | |
+| |  | |         | || |   |  __ /    | || |  | |    | |  | || |  | |\ \| |   | || |   '.___`-.   | |
+| |  \ `.___.'\  | || |  _| |  \ \_  | || |  \  `--'  /  | || | _| |_\   |_  | || |  |`\____) |  | |
+| |   `._____.'  | || | |____| |___| | || |   `.____.'   | || ||_____|\____| | || |  |_______.'  | |
+| |              | || |              | || |              | || |              | || |              | |
+| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
+ '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
 ```
 
  # Cron scheduler
@@ -34,8 +34,8 @@ the main application file that has the interaction code that the client dealing 
    - `require "rufus-scheduler"`: Imports the Rufus-Scheduler gem for scheduling jobs.<br>
 
 **Adding a Job (`add_job` function)**
-   - The `add_job` function allows users to add a new job by specifying the expected interval, scheduling frequency, and a unique job identifier.
-   - It takes a `job_list` as a parameter, representing the list of job_identifiers to validate and make sure the uniqueness of job identifiers.
+   - The `add_job` function allows users to add a new job by specifying the expected interval, scheduling frequency, a unique job identifier, and a job implementation.
+   - It takes a `job_list` as a parameter, representing the list of job_identifiers to validate and ensure the uniqueness of job identifiers.
    - Users are prompted to enter the expected interval, schedule frequency, and job identifier, ensuring the inputs are valid.
    - The `CronScheduler` object is created, and a job is scheduled using the provided parameters.<br>
 
@@ -84,8 +84,7 @@ the main application file that has the interaction code that the client dealing 
 **`log_job_execution`**
   - Logs the last execution details of all scheduled jobs, including start time, end time, expected execution time, and actual execution time.<hr>
 
-`/job.rb:`
- It contains the method that the client should write in his behavioral task to be executed. <hr>
+
 
 
 ## Installation
