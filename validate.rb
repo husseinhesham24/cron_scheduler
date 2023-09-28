@@ -1,3 +1,5 @@
+require "parser/current"
+
 def validate_interval(interval)
   valid_intervals = ["s", "m", "h", "d"]  # Valid interval units: minutes, hours, days
 
@@ -11,7 +13,7 @@ def validate_interval(interval)
 end
 
 def validate_frequency(frequency)
-  valid_frequencies = ["s","m", "h", "d"]  # Valid frequency units: minutes, hours, days
+  valid_frequencies = ["s", "m", "h", "d"]  # Valid frequency units: minutes, hours, days
 
   if frequency =~ /^(\d+)([#{valid_frequencies.join}])$/
     # puts "Interval are valid."
@@ -23,10 +25,9 @@ def validate_frequency(frequency)
 end
 
 def validate_uniqueness(job_id_list, job_identifier)
-
-  if job_id_list.any?{|map| map.get_jobs.key?(job_identifier)}
+  if job_id_list.any? { |map| map.get_jobs.key?(job_identifier) }
     puts "This job identifier already exist!"
-    return false 
+    return false
   else
     return true
   end

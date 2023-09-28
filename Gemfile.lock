@@ -1,13 +1,18 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    ast (2.4.2)
     concurrent-ruby (1.2.2)
     et-orbi (1.2.7)
       tzinfo
     fugit (1.8.1)
       et-orbi (~> 1, >= 1.2.7)
       raabro (~> 1.4)
+    parser (3.2.2.3)
+      ast (~> 2.4.1)
+      racc
     raabro (1.4.0)
+    racc (1.7.1)
     rufus-scheduler (3.9.1)
       fugit (~> 1.1, >= 1.1.6)
     tzinfo (2.0.6)
@@ -17,6 +22,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  parser
   rufus-scheduler
 
 BUNDLED WITH

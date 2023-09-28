@@ -26,7 +26,7 @@ class CronScheduler
   def schedule_job_with_rufus(identifier, frequency)
     @scheduler.every(frequency) do
       execution_start_time = Time.now
-      @jobs[identifier][0][:job].call
+      eval(@jobs[identifier][0][:job])
       execution_end_time = Time.now
       execution_time = execution_end_time - execution_start_time
       @jobs[identifier] << { execution_time: execution_time, execution_start_time: execution_start_time, execution_end_time: execution_end_time }

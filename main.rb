@@ -24,7 +24,15 @@ def add_job(job_list)
 
   job_list << scheduler
 
-  scheduler.schedule_job(job_identifier, frequency, expected_interval, method(:job))
+  puts "Enter Ruby code (type 'END' on a new line to finish):"
+  user_code = ""
+  loop do
+    line = gets.chomp
+    break if line == "END"
+    user_code += line + "\n"
+  end
+
+  scheduler.schedule_job(job_identifier, frequency, expected_interval, user_code)
 end
 
 puts "welcome to Telda cron scheduler"
