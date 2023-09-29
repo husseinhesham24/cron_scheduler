@@ -29,7 +29,6 @@ the main application file that has the interaction code that the client dealing 
 **Dependencies**
    - `require "./validate.rb"`: Imports custom validation methods for validating user inputs.
    - `require "./scheduler.rb"`: Imports the scheduler class for scheduling jobs and managing them.
-   - `require "./job.rb"`: Imports the job method for defining job behavior.
    - `require "rufus-scheduler"`: Imports the Rufus-Scheduler gem for scheduling jobs.<br>
 
 **Adding a Job (`add_job` function)**
